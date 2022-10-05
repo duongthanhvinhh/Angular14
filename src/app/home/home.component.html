@@ -1,4 +1,21 @@
 <div class="test">
-    <h3>HOME </h3>
-    <p>Recovering after a long Day at Work</p>
+    <h1>Fruits</h1>
+    <table class="tableFruit">
+        <tr>
+            <th>No.</th>
+            <th>Fruit</th>
+            <th>Price</th>
+            <th>Flash Sale</th>
+            <th>More Information</th>
+        </tr>
+        <tr class="right" *ngFor="let fruit of fruitAndPrice; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{fruit.fruit}}</td>
+            <td class="right">
+                <span [ngClass]="{'highPrice': fruit.price > 40 }">{{fruit.price}}</span>
+            </td>
+            <td class="right" [ngClass]="{'highPrice':fruit.price > 40}">{{fruit.flashSale}}</td>
+            <td><span [ngClass]="{'highPrice': fruit.price > 40 }">{{fruit.moreInfo}}</span></td>
+        </tr>
+    </table>
 </div>

@@ -2,5 +2,26 @@
     border: 1px solid;
     padding: 10px;
     box-shadow: 5px 10px red;
-    width: 400px;
+    width: 600px;
+}
+
+.tableFruit,
+tr,
+th,
+td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td,
+th {
+    min-width: 100px;
+}
+
+.highPrice {
+    color: red;
+}
+
+.right {
+    text-align: right;
 }
