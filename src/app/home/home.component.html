@@ -1,7 +1,6 @@
 <div class="test">
     <h1>Fruits</h1>
     <table class="tableFruit">
-
         <tr>
             <th>No.</th>
             <th>Fruit</th>
@@ -11,11 +10,12 @@
         </tr>
         <tr class="right" *ngFor="let fruit of fruitAndPrice; let i = index">
             <td>{{i + 1}}</td>
-            <td>{{fruit.fruit}}</td>
+            <td>{{fruit.fruit | uppercase}}</td>
             <td class="right">
-                <span [ngClass]="{'highPrice': fruit.price > 40 }">{{fruit.price}}</span>
+                <span [ngClass]="{'highPrice': fruit.price > 40 }">{{fruit.price | currency:'VND':'symbol':'1.3'}}</span>
             </td>
-            <td class="right" [ngClass]="{'highPrice':fruit.price > 40}">{{fruit.flashSale}}</td>
+            <!-- <td class="right" [ngClass]="{'highPrice':fruit.price > 40}">{{fruit.flashSale}}</td> -->
+            <td><span>{{fruit.price | onSale | lowercase}}</span></td>
             <td><span [ngClass]="{'highPrice': fruit.price > 40 }">{{fruit.moreInfo}}</span></td>
         </tr>
     </table>
