@@ -8,6 +8,7 @@ import { EMPTY, empty } from 'rxjs';
 export class HomeComponent implements OnInit {
   public name = 'VinhTester';
   public age = 24;
+  public myColor = 'red';
   // public fruits = ['Apple', 'Orange', 'Banana'];
   public fruitAndPrice = [
     { fruit: 'Apple', price: 50,flashSale:false,moreInfo:"Are in high price!" },
