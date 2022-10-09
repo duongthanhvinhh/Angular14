@@ -17,5 +17,11 @@ export class GetDataComponent implements OnInit {
     this.httpServerService.getRandomUsers(5).subscribe((data) => {
       console.log('getRandomUsers', data.results); //only get the date with key results
     });
+
+    // Below for post method
+    const payload = { body: 'comment 3', postID: 3 };
+    this.httpServerService.postComments(payload).subscribe(data => {
+      console.log('postComment', data);
+    });
   }
 }
