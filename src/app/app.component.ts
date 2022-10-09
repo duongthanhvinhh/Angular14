@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
