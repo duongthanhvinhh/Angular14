@@ -10,6 +10,7 @@ export class AboutComponent implements OnInit {
   public loginName = 'admin';
   public counter = 0;
   public total2Numbers = 0;
+  
   constructor(private common: CommonService) { }
 
   ngOnInit(): void {
