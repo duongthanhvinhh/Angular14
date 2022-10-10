@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterLink, RouterModule, Routes } from '@angular/router';
-import { StudentsComponent } from './students/students.component';
+import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
+import { CoursesComponent } from './courses/courses.component';
 import { HomeComponent } from './home/home.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AboutComponent } from './about/about.component';
-import { LoginComponent } from './login/login.component';
-import { MynavComponent } from './mynav/mynav.component';
+import { PracticeComponent } from './practice/practice.component';
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: '', component: LoginComponent },
+  { path: 'practice', component: PracticeComponent },
+  { path: 'courses', component: CoursesComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '' },
 ];
 
