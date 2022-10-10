@@ -27,3 +27,16 @@ li a:hover {
     color: black;
     background-color: white;
 }
+
+.design-credit {
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    clear: both;
+    padding: 1em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
