@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Angular';
-  constructor(private router: Router) {}
+  constructor(public router: Router,public router1: ActivatedRoute) {}
   // public goToHome(): void {
   //   this.router.navigate(['/', 'home']);
   // }

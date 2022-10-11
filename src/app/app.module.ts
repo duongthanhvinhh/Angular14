@@ -12,7 +12,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
- import { MatMenuModule } from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +23,10 @@ import { CoursesComponent } from './courses/courses.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LeaveMessageSuccessComponent } from './leave-message-success/leave-message-success.component';
+import { ContactSuccessComponent } from './contact/contact-success/contact-success.component';
+import { LoginsuccessComponent } from './login/loginsuccess/loginsuccess.component';
+import { ReadComponent } from './blog/read/read.component';
+import { DiscussComponent } from './blog/discuss/discuss.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { LeaveMessageSuccessComponent } from './leave-message-success/leave-mess
     CoursesComponent,
     BlogComponent,
     ContactComponent,
-    LeaveMessageSuccessComponent,
+    ContactSuccessComponent,
+    LoginsuccessComponent,
+    ReadComponent,
+    DiscussComponent,
   ],
   imports: [
     BrowserModule,

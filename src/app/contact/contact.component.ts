@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
   FormControl,
   FormGroupDirective,
@@ -28,12 +28,14 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
+  template:
+    '<app-leave-message-success [yourname]="yourname"></app-leave-message-success>',
 })
 export class ContactComponent implements OnInit {
   public message = '';
   public yourname = '';
   public email = '';
-  constructor(private router: Router) {}
+  constructor(private router: Router, public router1: ActivatedRoute) {}
 
   ngOnInit(): void {}
 
@@ -44,13 +46,13 @@ export class ContactComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-  public checkAllInfoEntered(): void {
+  public checkemailEntered(): void {
     if (
       !this.emailFormControl.hasError('email') &&
       !this.emailFormControl.hasError('required') &&
       !this.emailFormControl.hasError('required')
     ) {
-      this.router.navigate(['/successMessage']);
+      this.router.navigate(['/contact/contactsuccess']);
     }
   }
   public printYourname(): void {

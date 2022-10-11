@@ -6,15 +6,15 @@
 </div>
 <br />
 
-<p class="post-content">
+<p *ngIf="router1.children.length === 0" class="post-content">
     If you have questions, suggestions, fill up the form below and I’ll be in touch as soon as I get it!
 </p>
-<form class="example-form">
+<form *ngIf="router1.children.length === 0" class="example-form">
     <mat-form-field class="example-full-width">
         <input matInput placeholder="Your Name" [(ngModel)]="yourname" [ngModelOptions]="{ standalone: true }" />
     </mat-form-field>
 </form>
-<form class="example-form">
+<form *ngIf="router1.children.length === 0" class="example-form">
     <mat-form-field class="example-full-width">
         <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher" />
         <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
@@ -30,15 +30,16 @@
     </mat-form-field>
 </form>
 
-<form class="example-form">
+<form *ngIf="router1.children.length === 0" class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Message</mat-label>
         <input matInput #message maxlength="256" placeholder="Ex. I need help with..." />
         <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
     </mat-form-field>
 </form>
-<div class="example-button-row">
-    <button mat-raised-button color="primary" (click)="checkAllInfoEntered()" (click)="printYourname()">
+<div *ngIf="router1.children.length === 0" class="example-button-row">
+    <button mat-raised-button color="primary" (click)="checkemailEntered()" (click)="printYourname()">
     Submit
   </button>
 </div>
+<router-outlet></router-outlet>
