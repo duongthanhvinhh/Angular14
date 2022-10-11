@@ -11,7 +11,7 @@
 </p>
 <form class="example-form">
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Your Name" />
+        <input matInput placeholder="Your Name" [(ngModel)]="yourname" [ngModelOptions]="{ standalone: true }" />
     </mat-form-field>
 </form>
 <form class="example-form">
@@ -38,5 +38,7 @@
     </mat-form-field>
 </form>
 <div class="example-button-row">
-    <button mat-raised-button color="primary">Submit</button>
+    <button mat-raised-button color="primary" (click)="checkAllInfoEntered()" (click)="printYourname()">
+    Submit
+  </button>
 </div>

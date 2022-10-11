@@ -23,6 +23,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LeaveMessageSuccessComponent } from './leave-message-success/leave-message-success.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CoursesComponent,
     BlogComponent,
     ContactComponent,
+    LeaveMessageSuccessComponent,
   ],
   imports: [
     BrowserModule,

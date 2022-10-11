@@ -6,7 +6,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PracticeComponent } from './practice/practice.component';
- import { MatMenuModule } from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+import { LeaveMessageSuccessComponent } from './leave-message-success/leave-message-success.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'courses', component: CoursesComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'successMessage', component: LeaveMessageSuccessComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: '' },
 ];

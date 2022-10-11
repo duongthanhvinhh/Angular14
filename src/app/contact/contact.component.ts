@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormControl, FormGroupDirective, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroupDirective,
+  FormsModule,
+  NgForm,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -17,13 +24,15 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
+  public message = '';
+  public yourname = '';
+  public email = '';
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
@@ -33,13 +42,18 @@ export class ContactComponent implements OnInit {
     Validators.email,
   ]);
 
-
-
   matcher = new MyErrorStateMatcher();
+
+  public checkAllInfoEntered(): void {
+    if (
+      !this.emailFormControl.hasError('email') &&
+      !this.emailFormControl.hasError('required') &&
+      !this.emailFormControl.hasError('required')
+    ) {
+      this.router.navigate(['/successMessage']);
+    }
+  }
+  public printYourname(): void {
+    console.log(this.yourname);
+  }
 }
-
-
-
-/** Error when invalid control is dirty, touched, or submitted. */
-
-
