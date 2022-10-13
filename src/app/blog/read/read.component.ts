@@ -6,11 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./read.component.scss'],
 })
 export class ReadComponent implements OnInit {
-  public likeNumbers = 137;
   constructor() {}
 
   ngOnInit(): void {}
-  public liked(): void {
-    this.likeNumbers++;
-  }
 }

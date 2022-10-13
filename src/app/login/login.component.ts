@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
   log_email: string;
   log_pw: string;
   login_result = '';
+  hide = true;
   constructor(private router: Router, public router1: ActivatedRoute) {}
 
   ngOnInit(): void {}

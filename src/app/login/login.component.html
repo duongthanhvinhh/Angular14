@@ -1,19 +1,38 @@
 <div *ngIf="router1.children.length === 0" class="center_component">
-    <mat-card class="example-card">
-        <mat-card-content>
-            <mat-form-field class="example-form-field">
-                <label>Username:</label>
-                <input class="example-input" type="email" placeholder="Email" value=" " [(ngModel)]="log_email" />
-            </mat-form-field>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <mat-form-field class="example-form-field">
+        <label>Username:</label>
+        <input
+          class="example-input"
+          type="email"
+          placeholder="Email"
+          value=" "
+          [(ngModel)]="log_email"
+        />
+      </mat-form-field>
 
-            <mat-form-field class="example-form-field">
-                <label>Password:</label>
-                <input class="example-input" type="password" placeholder="Password" [(ngModel)]="log_pw" />
-            </mat-form-field>
-
-            <button mat-button class="example-btn" (click)="login()">Login</button>
-        </mat-card-content>
-    </mat-card>
-    <div style="margin-top: 30px">{{ login_result }}</div>
+      <mat-form-field class="example-form-field">
+        <label>Password:</label>
+        <input
+          class="example-input"
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="log_pw"
+        />
+      </mat-form-field>
+      <button
+        mat-button
+        class="example-btn"
+        (ngSubmit)="login()"
+        (click)="login()"
+        ng-keydown="login()"
+      >
+        Login
+      </button>
+    </mat-card-content>
+  </mat-card>
+  <div style="margin-top: 30px">{{ login_result }}</div>
 </div>
+
 <router-outlet></router-outlet>
