@@ -3,13 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-read',
   templateUrl: './read.component.html',
-  styleUrls: ['./read.component.scss']
+  styleUrls: ['./read.component.scss'],
 })
 export class ReadComponent implements OnInit {
+  public likeNumbers = 137;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  public liked(): void {
+    this.likeNumbers++;
   }
-
 }
